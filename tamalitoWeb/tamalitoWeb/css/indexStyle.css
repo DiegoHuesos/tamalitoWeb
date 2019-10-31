@@ -1,0 +1,253 @@
+html{
+	background-color: #303952;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #4b6584;
+	color: white;
+	font-family: Arial, Helvetica, Sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+}
+
+/* ----------- MAIN HEADER ------------*/
+#mainHeader{
+	height: 70px;
+	width: 100%;
+	background-color:  #303952;
+}
+
+#logo{
+	display:block;
+	float:left;
+	margin-left: 75px;
+}
+#logo a{
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+}
+
+#navBar{
+	float:right;
+	margin-right: 60px;
+	overflow: hidden;
+}
+#navBar ul{
+	list-style: none;
+	margin-top: 20px;
+	padding: 0px;
+}
+#navBar li{
+	display: inline;
+}
+#navBar a{
+	text-decoration: none;
+	font-size: 20px;
+	padding-right:30px; 
+	color:white;
+}
+
+#navBar a:hover{
+	color: #2bcbba;
+}
+
+
+
+/*------------ TAMALES -----------*/
+#container-categories{
+	width:100%;
+	margin:60px 0 40% 0;
+	padding:0;
+	text-align:center;
+	
+}
+
+.box-category{
+	text-align: center;
+	float:left;
+	margin-bottom: 5%;
+	padding:0;
+	width: 50%;
+	height: 400px;
+	
+}
+
+.box-category img{
+	width:80%;
+	border-radius: 50%;
+	transition-duration: 1s;
+}
+
+.box-category img:hover{
+	border-radius: 20%;
+	transition-duration: 1s;
+}
+
+.img-category{
+	float: left;
+	margin: 8% 10% 10% 10%;
+	text-align:middle;
+}
+
+.subtitle{
+	text-align: center;
+	width:100%;
+	color:black;
+	font-size: 30px;
+}
+
+/*------------ LINE ---------------*/
+#line {
+    height: 6px;
+    width: 80%;
+    margin: 6% 10% 6% 10%;
+    float: left;
+    background-color: #303952;
+}
+/* ----------- NOSOTROS ------------*/
+#nosotros{
+	margin: 10% 0 10% 0;
+	padding: 20% 0 0 0 ;
+	box-sizing: border-box;
+
+
+}
+#what-is{
+	margin:0% 10% 0% 8%;
+	float:left;
+	width:80%;
+	text-align:justify;
+	box-sizing: border-box;
+
+}
+
+#what-is p{
+	font-size: 24px;
+	line-height: 1.5;
+	color: white;
+}
+.sidebar-right{
+	float:left;
+	margin:5% 0 5% 10%;
+	padding:0 3% 0 3%;
+	width:20%;
+	background: #333;
+	color: white;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 20%;
+}
+.sidebar-right img{
+	border-radius: 50%;
+	transition-duration: 1.5s
+}
+
+.sidebar-right img:hover{
+	border-radius: 10%;
+	transition-duration: 1.5s
+}
+
+/* ----------- CONTACTO ------------*/
+#contact{
+	float: left;
+	width: 60%;
+	margin: 0 0 0 20%;
+	box-sizing: border-box;
+	font-size: 28;
+}
+#map{
+	width: 250px;
+	height:220px;
+	margin-top: 5%;
+	margin-right: 10%;
+	border-radius: 5%;
+	float:right;
+}
+#contact-details{
+	float:left;
+	margin-left: 0%;
+	width:30%;
+	text-align: center;
+	font-size: 24px;
+}
+#follow-us{
+	margin-left: 5%;
+	text-align: center;
+	font-size: 28;
+}
+.cont-sm{
+	float:left;
+	width: 8%;
+	height:8%;
+	margin-right: 5%;
+	
+	
+}
+.sc-img{
+	width:100%;
+	height:100%;
+}
+
+
+/*--------------- FOOTER -------------*/
+#mainFooter{
+	margin-top: 100%;
+	background-color: #303952;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+
+
+/*----------------*/
+@media(max-width:950px){
+	#what-is{
+		width:100%;
+		float:none;
+	}
+	#sidebar-right{
+		margin: 10% 25%;
+		width:50%;
+		float:none;
+	}
+}
+@media(max-width:780px){
+	
+
+	#navbar{
+		display: none;
+	}
+
+	#logo{
+		width:100%;
+		text-align:center;
+		margin-left: 0;
+	}
+	.box-category{
+	
+		height: 273px;
+		
+	}
+}
+
+@media(max-width:570){
+	
+	#sidebar-right{
+
+		margin: 10% 15%;
+		width:70%;
+		float:none;
+	}
+	#sidebar-right img{
+		margin: 10% 15%;
+		width:70%;
+		float:none;
+	}
+}
