@@ -20,18 +20,49 @@ namespace tamalitoWeb
                 return null;
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void Algo(object sender, EventArgs e)
-        {
-            Console.WriteLine("le picastess");
-        }
 
-        protected void submit_Click(object sender, EventArgs e)
+        protected void Enviar_Click(object sender, EventArgs e)
         {
-            submit.Text=  username.ToString();
+            OdbcConnection con = conectarBD();
+            try
+            {
+                int usuario = int.Parse(User.Text);
+                String contra = Password.Text;
+                String query = String.Format("select contra from clientes where idCliente={0}", usuario);
+                OdbcCommand cmd = new OdbcCommand(query, con);
+                OdbcDataReader rd = cmd.ExecuteReader();
+                rd.Read();
+                if (rd.HasRows)
+                {
+                    if (contra.Equals(rd.GetString(0)))
+                    {
+                        Session["usuario"] = usuario;
+                        Response.Redirect("Ordenar.aspx");
+                    }
+                    else
+                    {
+                        String respuesta = "Contraseña Incorrecta";
+                        Response.Write(respuesta);
+                    }
+                }
+                else
+                {
+                    String respuesta = "Usuario Inexistente";
+                    Response.Write(respuesta);
+                }
+                rd.Close();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                String respuesta = "<script>alert('Error'" + ex + ");</script>";
+                Response.Write(respuesta);
+            }
         }
     }
 }

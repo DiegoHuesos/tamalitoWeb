@@ -20,17 +20,31 @@
 			</ul>
 		</nav>	
 	</div>
- <form class="box" action="log.html" method="post">
-  <h1>Registrarse</h1>
-  <input type="text" name="" placeholder="Nombre"/>
-  <input type="text" name="" placeholder="Apellido Paterno"/>
-  <input type="text" name="" placeholder="Apellido Materno"/>
-  <input type="text" name="" placeholder="Correo"/>
-  <input type="text" name="" placeholder="Número de Tarjeta"/>
-  <input type="submit" name="" placeholder="Submit"/>
- </form>
-
-
+    <form id="Form1" class="box" runat="server">
+        <div id="idunico"  runat="server">
+            <asp:Label ID="lbTitle" runat="server" Text="REGISTRARSE"></asp:Label>
+            <br />
+            <asp:TextBox id="Nombre" class="inp" runat="server" placeholder="Nombre"/>
+            <br />
+            <asp:TextBox id="ApellidoPaterno" class="inp" runat="server" placeholder="Apellido Paterno"/>
+            <br />
+            <asp:TextBox ID="ApellidoMaterno" class="inp" runat="server" placeholder="Apellido Materno"/>
+            <br /> 
+            <asp:TextBox ID="Correo" class="inp" runat="server" placeholder="Correo Electrónico"/>
+            <br />
+            <asp:TextBox ID="numTarjeta" class="inp" runat="server" placeholder="Número de Tarjeta"/>
+            <br />
+            <asp:TextBox ID="contrasenia" class="inp" runat="server" placeholder="Password"/>
+            <br />
+            <asp:Button text="Enviar" id="Enviar" class="bt" runat="server" OnClick="Enviar_Click"/>
+            <br />
+        </div>
+    </form>
+    
+    <br />
+    <br />
+    <br />
+    <br />
 
 </body>
 

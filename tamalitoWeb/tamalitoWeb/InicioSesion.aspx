@@ -20,14 +20,21 @@
 			</ul>
 		</nav>	
 	</div>
-    <form id="form1" runat="server">
-        <h1>Login</h1>
-        <input id="username" runat="server"  placeholder="Username" type="text" />
- 
-        <input type="password" name="" placeholder="Password" id="password"/>
-        <button type="submit" name="" placeholder="Submit" onclick="submit"/>
-         
-        <asp:Button ID="submit" runat="server"  Text="Submit" OnClick="submit_Click" />
+    
+
+    <form id="Form1" class="box" runat="server">
+        <div id="idunico" runat="server">
+            <asp:Label ID="lbTitle" runat="server" Text="Iniciar sesión"></asp:Label>
+            <br />
+            <br />
+            <br />
+            <asp:TextBox id="User" class="inp" runat="server" placeholder="Username"/>
+            <br />
+            <asp:TextBox id="Password" class="inp" runat="server" placeholder="Password"/>
+            <br />
+            <asp:Button text="Iniciar" id="Enviar" class="bt" runat="server" OnClick="Enviar_Click"/>
+            <br />
+        </div>
     </form>
 
 </body>

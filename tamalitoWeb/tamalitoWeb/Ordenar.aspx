@@ -23,43 +23,69 @@
 			</ul>
 		</nav>	
 	</div>
-
+    
 	<!-- CATÁLOGO -->
-	<div id="container-categories">
-		<div class="subtitle"><h1>¡Llévele, llévele!</h1></div>
-		<input type="submit" class="botonverde"/>
-		<div type="submit" class="box-category">
-			<div id ="Abstract-img" class="img-category">
-				<img src="./images/tamales/verde.jpg" alt="Tamal Verde">
-				<h1>Verde</h1>
-			</div>
-		</div>
+    <h2 id="lbTitle">¡Pide lo que quieras!</h2>
+    <form id="Form1" class="box" runat="server">
 
-		<div class="box-category">
-			<div id ="Wooden-img" class="img-category">
-				<img src="./images/tamales/rojo.jpg" alt="Tamal Rojo">
-				<h1>Rojo</h1>
-			</div>
-		</div>
-			
-		<div class="box-category">
-			<div id ="Sport-img" class="img-category">
-				<img src="./images/tamales/mole.jpg" alt="Tamal de Mole">
-				<h1>Mole</h1>
-			</div>
-		</div>
-			
-			
-		<div class="box-category">
-			<div id ="Smart-img" class="img-category">
-				<img src="./images/tamales/dulce.jpg" alt="Tamal Dulce">
-				<h1>Dulce</h1>
-			</div>	
-		</div>
-			
-	</div>
-
-	<div id="line"></div>
+        <div class="productos">
+        <div class="rows">
+            <div id="divVerde" class="cards">
+                <asp:Label ID="lbVerdePrecio" class="lb" runat="server" Text="$20"></asp:Label>
+                <asp:ImageButton ID="btVerde" runat="server" src="./images/tamales/verde.jpg" class="bt" OnClick="btVerde_Click"/>
+                <asp:DropDownList ID="ddVerde" class="ddl" runat="server" AutoPostBack="True"  OnTextChanged="ddVerde_TextChanged" OnSelectedIndexChanged="ddVerde_SelectedIndexChanged"></asp:DropDownList>
+            </div>
+            <div class="cards">
+                <asp:Label ID="lbRojoPrecio" class="lb" runat="server" Text="$20"></asp:Label>
+                <asp:ImageButton ID="btRojo" runat="server" src="./images/tamales/rojo.jpg" class="bt"/>
+                <asp:DropDownList ID="ddRojo" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <div class="cards">
+                <asp:Label ID="lbMolePrecio" class="lb" runat="server" Text="$20"></asp:Label>
+                <asp:ImageButton ID="btMole" runat="server" src="./images/tamales/mole.jpg" class="bt"/>
+                <asp:DropDownList ID="ddMole" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <div class="cards">
+                <asp:Label ID="lbDulcePrecio" class="lb" runat="server" Text="$20"></asp:Label>
+                <asp:ImageButton ID="btDulce" runat="server" src="./images/tamales/dulce.jpg" class="bt"/>
+                <asp:DropDownList ID="ddDulce" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+        </div>
+        <div class="rows">
+            <div class="cards">
+                <asp:Label ID="lbAtoleVainillaPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:ImageButton ID="btAtoleVainilla" runat="server" src="./images/atoles/vainilla.jpg" class="bt"/>
+                <asp:DropDownList ID="ddAtoleVainilla" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <div class="cards">
+                <asp:Label ID="lbAtoleChocolatePrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:ImageButton ID="btAtoleChocolate" runat="server" src="./images/atoles/chocolate.jpg" class="bt"/>
+                <asp:DropDownList ID="ddChocolate" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <div class="cards"> 
+                <asp:Label ID="lbAtoleFresaPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:ImageButton ID="btAtoleFresa" runat="server" src="./images/atoles/fresa.jpg" class="bt"/>
+                <asp:DropDownList ID="ddAtoleFresa" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+            <div class="cards">
+                <asp:Label ID="lbAtoleArrozPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:ImageButton ID="btAtoleArroz" runat="server" src="./images/atoles/arroz.jpg" class="bt"/>
+                <asp:DropDownList ID="ddAtoleArroz" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
+            </div>
+        </div>
+    </div>
+        <br />
+        <br />
+        <asp:GridView ID="gvOrden" runat="server"></asp:GridView>
+        <br />
+        <asp:Label ID="lbTotalOrden" runat="server" Text="Total Orden:"></asp:Label>
+        <asp:Label ID="lbTotal" runat="server" Text="$0"></asp:Label>
+        <br />
+        <asp:Button ID="btConfirmar" runat="server" Text="Confirmar Compra" class="btConfirmar"/>
+        <br />
+        <br />
+    </form>
+    
 
 	
 </body>

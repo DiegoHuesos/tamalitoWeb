@@ -81,6 +81,10 @@
     <Content Include="InicioSesion.aspx" />
     <Content Include="Ordenar.aspx" />
     <Content Include="Registro.aspx" />
+    <None Include="Resources\arroz.jpg" />
+    <None Include="Resources\chocolate.jpg" />
+    <None Include="Resources\fresa.jpg" />
+    <None Include="Resources\vainilla.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
