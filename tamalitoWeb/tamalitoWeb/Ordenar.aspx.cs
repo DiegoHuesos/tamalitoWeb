@@ -77,6 +77,7 @@ namespace tamalitoWeb
                         ddAtoleArroz.Items.Add(i + "");
                         i++;
                     }
+
                 }
             }
             catch(Exception ex)
@@ -87,65 +88,148 @@ namespace tamalitoWeb
             
         }
 
-        protected void btVerde_Click(object sender, ImageClickEventArgs e)
+       
+        //BOTÓN DEL CARRITO
+        protected void btCarrito_Click(object sender, EventArgs e) 
         {
-            if (!botonesActivos["verde"])
+            try
             {
-                botonesActivos["verde"] = true;
-
+                total = 0;
+                carrito.Clear();
+                /* Si el Drop Down List tiene un valor distinto de cero toma ese valor
+                 *y lo agrega a su cantidadSeleccionada correspondiente; es análogo con todos
+                * los productos.
+                */
+                    cantSeleccionada["verde"] = int.Parse(ddVerde.SelectedValue.ToString());
+                    if (cantSeleccionada["verde"] != 0)
+                    {
+                        subTotal = cantSeleccionada["verde"] * precioTamal;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Tamal Verde";
+                        ob.cantidad = cantSeleccionada["verde"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                    cantSeleccionada["rojo"] = int.Parse(ddRojo.SelectedValue.ToString());
+                    if(cantSeleccionada["rojo"] != 0)
+                    {
+                        subTotal = cantSeleccionada["rojo"] * precioTamal;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Tamal Rojo";
+                        ob.cantidad = cantSeleccionada["rojo"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["mole"] = int.Parse(ddMole.SelectedValue.ToString());
+                    if (cantSeleccionada["mole"] != 0)
+                    {
+                        subTotal = cantSeleccionada["mole"] * precioTamal;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Tamal Mole";
+                        ob.cantidad = cantSeleccionada["mole"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["dulce"] = int.Parse(ddDulce.SelectedValue.ToString());
+                    if (cantSeleccionada["dulce"] != 0)
+                    {
+                        subTotal = cantSeleccionada["dulce"] * precioTamal;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Tamal Dulce";
+                        ob.cantidad = cantSeleccionada["dulce"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["arroz"] = int.Parse(ddAtoleArroz.SelectedValue.ToString());
+                    if (cantSeleccionada["arroz"] != 0)
+                    {
+                        subTotal = cantSeleccionada["arroz"] * precioAtole;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Atole Arroz";
+                        ob.cantidad = cantSeleccionada["arroz"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["vainilla"] = int.Parse(ddAtoleVainilla.SelectedValue.ToString());
+                    if (cantSeleccionada["vainilla"] != 0)
+                    {
+                        subTotal = cantSeleccionada["vainilla"] * precioAtole;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Atole Vainilla";
+                        ob.cantidad = cantSeleccionada["vainilla"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["fresa"] = int.Parse(ddAtoleFresa.SelectedValue.ToString());
+                    if (cantSeleccionada["fresa"] != 0)
+                    {
+                        subTotal = cantSeleccionada["fresa"] * precioAtole;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Atole Fresa";
+                        ob.cantidad = cantSeleccionada["fresa"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                    cantSeleccionada["chocolate"] = int.Parse(ddChocolate.SelectedValue.ToString());
+                    if (cantSeleccionada["chocolate"] != 0)
+                    {
+                        subTotal = cantSeleccionada["chocolate"] * precioAtole;
+                        ObjSelec ob = new ObjSelec();
+                        ob.producto = "Atole Chocolate";
+                        ob.cantidad = cantSeleccionada["chocolate"];
+                        ob.costo = subTotal;
+                        carrito.Add(ob);
+                        total = total + subTotal;
+                        subTotal = 0;
+                    }
+                
+                gvOrden.DataSource = carrito;
+                gvOrden.DataBind();
+                lbTotal.Text = "$ " + total;
+                
             }
-            else
-            {
-                botonesActivos["verde"] = false;
-
+            catch(Exception ex) {
+                String respuesta = "Error" + ex;
+                Response.Write(respuesta);
             }
-            actualizaLista();
         }
 
-        public void actualizaLista()
+        protected void btGenerarPedido_Click(object sender, EventArgs e)
         {
-            gvOrden.DataSource = null;
-            carrito.Clear();
-            total = 0;
-            foreach (var item in botonesActivos)
+            try
             {
-                if (item.Value)
-                {
-                    if ((item.Key).Equals("verde") || (item.Key).Equals("rojo") || (item.Key).Equals("mole") || (item.Key).Equals("dulce"))
-                        subTotal = cantSeleccionada[item.Key] * precioTamal;
-                    else
-                        subTotal = cantSeleccionada[item.Key] * precioAtole;
-
-                    ObjSelec ob = new ObjSelec();
-                    ob.producto = (item.Key).ToString();
-                    ob.cantidad = cantSeleccionada[item.Key];
-                    ob.costo = subTotal;
-                    carrito.Add(ob);
-
-                    total += subTotal;
-                }
+                Session["total"] = "aaa"; //total;
+                //Session["carrito"] = carrito;
+                Response.Redirect("ConfirmarCompra.aspx");
             }
-            gvOrden.DataSource = carrito;
-            gvOrden.DataBind();
-            lbTotal.Text = "$ " + total;
-        }
-
-        
-
-        protected void ddVerde_TextChanged(object sender, EventArgs e)
-        {
-            //lbTotal.Text = ""+ ddVerde.SelectedValue.ToString();
-            
-            cantSeleccionada["verde"] = int.Parse(ddVerde.SelectedValue.ToString());
-            actualizaLista();
-            
-        }
-
-        protected void ddVerde_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lbTotal.Text = "bbb";
+            catch (Exception ex) {
+                String respuesta = "Error" + ex;
+                Response.Write(respuesta);
+            }
         }
     }
+
+
 
     //CLASE AUXILIAR PARA CREAR LA LISTA DE PRODUCTOS TEMPORAL QUE PROBABLEMENTE SERÁ COMPRADA:
     public class ObjSelec

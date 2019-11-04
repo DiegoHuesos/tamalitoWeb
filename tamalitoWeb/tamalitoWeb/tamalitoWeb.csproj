@@ -77,6 +77,7 @@
     <None Include="images\tamales\mole.jpg" />
     <None Include="images\tamales\rojo.jpg" />
     <None Include="images\tamales\verde.jpg" />
+    <Content Include="ConfirmarCompra.aspx" />
     <Content Include="index.aspx" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="Ordenar.aspx" />
@@ -88,6 +89,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmarCompra.aspx.cs">
+      <DependentUpon>ConfirmarCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmarCompra.aspx.designer.cs">
+      <DependentUpon>ConfirmarCompra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

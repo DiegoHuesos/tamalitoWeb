@@ -40,6 +40,15 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.ImageButton btVerde;
         
         /// <summary>
+        /// Control lbVerde.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbVerde;
+        
+        /// <summary>
         /// Control ddVerde.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace tamalitoWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btRojo;
+        
+        /// <summary>
+        /// Control lbRojo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbRojo;
         
         /// <summary>
         /// Control ddRojo.
@@ -94,6 +112,15 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.ImageButton btMole;
         
         /// <summary>
+        /// Control lbMole.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbMole;
+        
+        /// <summary>
         /// Control ddMole.
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace tamalitoWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btDulce;
+        
+        /// <summary>
+        /// Control lbDulce.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbDulce;
         
         /// <summary>
         /// Control ddDulce.
@@ -148,6 +184,15 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.ImageButton btAtoleVainilla;
         
         /// <summary>
+        /// Control lbVainilla.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbVainilla;
+        
+        /// <summary>
         /// Control ddAtoleVainilla.
         /// </summary>
         /// <remarks>
@@ -173,6 +218,15 @@ namespace tamalitoWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btAtoleChocolate;
+        
+        /// <summary>
+        /// Control lbChocolate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChocolate;
         
         /// <summary>
         /// Control ddChocolate.
@@ -202,6 +256,15 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.ImageButton btAtoleFresa;
         
         /// <summary>
+        /// Control lbFresa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbFresa;
+        
+        /// <summary>
         /// Control ddAtoleFresa.
         /// </summary>
         /// <remarks>
@@ -229,6 +292,15 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.ImageButton btAtoleArroz;
         
         /// <summary>
+        /// Control lbArroz.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbArroz;
+        
+        /// <summary>
         /// Control ddAtoleArroz.
         /// </summary>
         /// <remarks>
@@ -236,6 +308,15 @@ namespace tamalitoWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddAtoleArroz;
+        
+        /// <summary>
+        /// Control btCarrito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btCarrito;
         
         /// <summary>
         /// Control gvOrden.
@@ -265,12 +346,12 @@ namespace tamalitoWeb {
         protected global::System.Web.UI.WebControls.Label lbTotal;
         
         /// <summary>
-        /// Control btConfirmar.
+        /// Control btGenerarPedido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btConfirmar;
+        protected global::System.Web.UI.WebControls.Button btGenerarPedido;
     }
 }
