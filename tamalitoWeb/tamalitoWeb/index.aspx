@@ -104,7 +104,7 @@
 
 			</div>
 				<br>
-				<h1>Hechanos un grito:<asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/maps.jpg" AlternateText="Mapa oficina" CssClass="img" Height="219px" ImageAlign="Right" Width="263px"/>
+				<h1>Echanos un grito:<asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/maps.jpg" AlternateText="Mapa oficina" CssClass="img" Height="219px" ImageAlign="Right" Width="263px"/>
         </h1>
 				<h2> &nbsp &nbsp atencion@tamalito.itam</h2>
 				<h2> &nbsp &nbsp +55 3478 5643</h2>

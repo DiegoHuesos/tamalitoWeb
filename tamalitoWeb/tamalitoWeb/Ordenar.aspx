@@ -18,7 +18,6 @@
 		<!--navBar-->
 		<nav id="navBar">	<!--The <nav> tag defines a set of navigation links.-->
 			<ul>
-				<li><a href="./index.aspx">Inicio</a></li>
 				<li><a href="./LogOut.aspx">Log-Out</a></li>
 			</ul>
 		</nav>	
