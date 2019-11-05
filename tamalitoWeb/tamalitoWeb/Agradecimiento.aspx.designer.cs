@@ -10,51 +10,42 @@
 namespace tamalitoWeb {
     
     
-    public partial class ConfirmarCompra {
+    public partial class Agradecimiento {
         
         /// <summary>
-        /// Control form1.
+        /// Control Form2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
         
         /// <summary>
-        /// Control gvOrden.
+        /// Control idunico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrden;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idunico;
         
         /// <summary>
-        /// Control lbTotalOrden.
+        /// Control lbAgradecimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTotalOrden;
+        protected global::System.Web.UI.WebControls.Label lbAgradecimiento;
         
         /// <summary>
-        /// Control lbTotal.
+        /// Control lbAyuda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTotal;
-        
-        /// <summary>
-        /// Control btConfirmarPedido.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btConfirmarPedido;
+        protected global::System.Web.UI.WebControls.Label lbAyuda;
     }
 }

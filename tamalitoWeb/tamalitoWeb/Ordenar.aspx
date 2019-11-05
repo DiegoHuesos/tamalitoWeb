@@ -19,7 +19,7 @@
 		<nav id="navBar">	<!--The <nav> tag defines a set of navigation links.-->
 			<ul>
 				<li><a href="./index.aspx">Inicio</a></li>
-				<li><a href="./index.aspx">Log-Out</a></li>
+				<li><a href="./LogOut.aspx">Log-Out</a></li>
 			</ul>
 		</nav>	
 	</div>
@@ -84,14 +84,19 @@
     </div>
         <br />
         <br />
-        <asp:Button ID="btCarrito" runat="server" Text="Ver Carrito" Width="80px" OnClick="btCarrito_Click"/>
+        <asp:Button ID="btCarrito" runat="server" Text="Ver Carrito" OnClick="btCarrito_Click" CssClass="btConfirmar" />
         &nbsp;<br />
-        <asp:GridView ID="gvOrden" runat="server"></asp:GridView>
         <br />
-        <asp:Label ID="lbTotalOrden" runat="server" Text="Total Orden:"></asp:Label>
-        <asp:Label ID="lbTotal" runat="server" Text="$0"></asp:Label>
         <br />
-        <asp:Button ID="btGenerarPedido" runat="server" Text="Generar Pedido" class="btConfirmar" OnClick="btGenerarPedido_Click"/>
+        <asp:GridView ID="gvOrden" class="gridView" runat="server" style="margin-left:40%;"></asp:GridView>
+        <br />
+        <br />
+        <asp:Label ID="lbTotalOrden" runat="server" Text="Total Orden:" Font-Size="Larger" style="margin-left:40%;"></asp:Label>
+        <asp:Label ID="lbTotal" runat="server" Text="$0" Font-Size="Larger"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btConfirmarCompra" runat="server" Text="ConfirmarCompra" class="btConfirmar" OnClick="btConfirmarPedido_Click" CssClass="btConfirmar"/>
         <br />
         <br />
     </form>

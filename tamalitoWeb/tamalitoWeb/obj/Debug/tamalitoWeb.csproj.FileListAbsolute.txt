@@ -114,3 +114,4 @@ C:\Users\Angel\Desktop\tamalitoWeb\tamalitoWeb\tamalitoWeb\obj\Debug\tamalitoWeb
 C:\Users\Angel\Desktop\tamalitoWeb\tamalitoWeb\tamalitoWeb\obj\Debug\tamalitoWeb.dll
 C:\Users\Angel\Desktop\tamalitoWeb\tamalitoWeb\tamalitoWeb\obj\Debug\tamalitoWeb.pdb
 C:\Users\Angel\Desktop\tamalitoWeb\tamalitoWeb\tamalitoWeb\obj\Debug\tamalitoWeb.csprojAssemblyReference.cache
+C:\Users\AZATARAIL\Desktop\tamalitoWeb\tamalitoWeb\tamalitoWeb\obj\Debug\tamalitoWeb.g.resources

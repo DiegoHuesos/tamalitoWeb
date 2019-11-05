@@ -17,13 +17,16 @@ namespace tamalitoWeb
                 conexion.Open();
                 return conexion;
             } catch (Exception ex) {
+                String respuesta = "Error" + ex;
+                Response.Write(respuesta);
                 return null;
             }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["idRegistrado"] != null)
+                lbRegistroNuevo.Text = Session["idRegistrado"].ToString();
         }
 
         protected void Enviar_Click(object sender, EventArgs e)
@@ -46,6 +49,7 @@ namespace tamalitoWeb
                     }
                     else
                     {
+                        Session["usuario"] = "";
                         String respuesta = "Contraseña Incorrecta";
                         Response.Write(respuesta);
                     }

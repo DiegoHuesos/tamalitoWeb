@@ -221,6 +221,7 @@ body{
 	text-align: center;
 	border: 2px solid #2ecc71;
 	padding: 14px 40px;
+	style="margin-left:40%;"
 	outline: none;
 	border-radius: 24px;
 	transition: .7s;
@@ -229,5 +230,6 @@ body{
 }
 
 .btConfirmar:hover{
-	background: Black;
+border-radius: 60px;
+background-color: Green;
 }

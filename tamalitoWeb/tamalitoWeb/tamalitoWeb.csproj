@@ -77,24 +77,26 @@
     <None Include="images\tamales\mole.jpg" />
     <None Include="images\tamales\rojo.jpg" />
     <None Include="images\tamales\verde.jpg" />
-    <Content Include="ConfirmarCompra.aspx" />
+    <Content Include="Agradecimiento.aspx" />
     <Content Include="index.aspx" />
     <Content Include="InicioSesion.aspx" />
+    <Content Include="LogOut.aspx" />
     <Content Include="Ordenar.aspx" />
     <Content Include="Registro.aspx" />
     <None Include="Resources\arroz.jpg" />
     <None Include="Resources\chocolate.jpg" />
     <None Include="Resources\fresa.jpg" />
     <None Include="Resources\vainilla.jpg" />
+    <Resource Include="Resources\maps.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfirmarCompra.aspx.cs">
-      <DependentUpon>ConfirmarCompra.aspx</DependentUpon>
+    <Compile Include="Agradecimiento.aspx.cs">
+      <DependentUpon>Agradecimiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ConfirmarCompra.aspx.designer.cs">
-      <DependentUpon>ConfirmarCompra.aspx</DependentUpon>
+    <Compile Include="Agradecimiento.aspx.designer.cs">
+      <DependentUpon>Agradecimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -109,6 +111,13 @@
     </Compile>
     <Compile Include="InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ordenar.aspx.cs">
       <DependentUpon>Ordenar.aspx</DependentUpon>

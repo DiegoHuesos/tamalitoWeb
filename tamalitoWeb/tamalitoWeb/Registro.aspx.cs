@@ -41,19 +41,20 @@ namespace tamalitoWeb
                 String correo = Correo.Text;
                 String numeroTarjeta = numTarjeta.Text;
                 String contra = contrasenia.Text;
-                String query = String.Format("select correo from clientes where correo='{0}'", correo);
+                String query = String.Format("select correo from clientes where correo='{0}'", correo); //Busca si el correo ya está registrado
                 OdbcCommand cmd = new OdbcCommand(query, con);
                 OdbcDataReader rd = cmd.ExecuteReader();
                 rd.Read();
-                if (!rd.HasRows)
+                if (!rd.HasRows)//Si el correo no está registrado el query debería regresar vacío
                 {
-                    String query2 = String.Format("insert into clientes values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", numeroTarjeta, correo, nombre, apellidoP, apellidoM, contra);
+                    String query2 = String.Format("insert into clientes(numTarjeta, correo, nombre, apellidoP, apellidoM, contra) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", numeroTarjeta, correo, nombre, apellidoP, apellidoM, contra);
                     OdbcCommand cmd2 = new OdbcCommand(query2, con);
                     cmd2.ExecuteNonQuery();
                     String query3 = "select max(idCliente) from clientes";
                     OdbcCommand cmd3 = new OdbcCommand(query3, con);
                     OdbcDataReader rd2 = cmd3.ExecuteReader();
                     rd2.Read();
+                    Session["idRegistrado"] = "Tu Número de Usuario:" + rd2.GetInt32(0);
                     Session["usuario"]=rd.GetInt32(0);
                     String respuesta = "Bienvenido";
                     Response.Write(respuesta);
@@ -61,17 +62,19 @@ namespace tamalitoWeb
                 }
                 else
                 {
-                    String respuesta = "Correo ya registrado";
-                    Response.Write(respuesta);
+                    Session["idRegistrado"] = "Correo ya registrado";
                 }
                 rd.Close();
                 con.Close();
+                
             }
             catch (Exception ex)
             {
                 String respuesta = "<script>alert('Error'" + ex + ");</script>";
                 Response.Write(respuesta);
             }
+            
+            Response.Redirect("InicioSesion.aspx");
         }
     }
 }

@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./css/indexStyle.css">
 </head>
 <body> 
+	<form id="form1" runat="server">
 	<!-- HEADER -->
 	<div id="mainHeader">
 		<!-- Logo -->
@@ -19,7 +20,6 @@
 		<nav id="navBar">	<!--The <nav> tag defines a set of navigation links.-->
 			<ul>
 				<li><a href="#">Inicio</a></li>
-				<li><a href="./Ordenar.aspx">Ordenar</a></li>
 				<li><a href="#nosotros">Nosotros</a></li>
 				<li><a href="#contact">Contacto</a></li>
 				<li><a href="./InicioSesion.aspx">Log-In</a></li>
@@ -96,15 +96,16 @@
 	<!-- CONTACTO -->
 	<div id="contact">
 		<div class="subtitle"><h1>Contacto</h1></div>
-		<div id="map">Maps from the office.</div>
-
+        <div class="map" style="margin-right:5%;">
+        </div>
 		<div id="contact-details">
 
 			
 
 			</div>
 				<br>
-				<h1>Hechanos un grito:</h1>
+				<h1>Hechanos un grito:<asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/maps.jpg" AlternateText="Mapa oficina" CssClass="img" Height="219px" ImageAlign="Right" Width="263px"/>
+        </h1>
 				<h2> &nbsp &nbsp atencion@tamalito.itam</h2>
 				<h2> &nbsp &nbsp +55 3478 5643</h2>
 				<br>
@@ -152,6 +153,8 @@
 	</script>
 		
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+    </form>
 
 </body>
 </html>

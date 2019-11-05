@@ -162,7 +162,7 @@ body{
 	box-sizing: border-box;
 	font-size: 28;
 }
-#map{
+.map{
 	width: 250px;
 	height:220px;
 	margin-top: 5%;
