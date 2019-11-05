@@ -12,7 +12,7 @@ namespace tamalitoWeb
     {
         //ATRIBUTOS O VARIBALES GLOBALES:
         List<ObjSelec> carrito = new List<ObjSelec>();
-        int precioTamal = 20;
+        int precioTamal = 15;
         int precioAtole = 10;
         int subTotal = 0;
         int total = 0;
@@ -68,6 +68,7 @@ namespace tamalitoWeb
                     }
 
                 }
+
             }
             catch(Exception ex)
             {
