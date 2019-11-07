@@ -11,7 +11,9 @@ namespace tamalitoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            /*Esta página está destinada a mostrar la información general del negocio, al igual que un poco de información 
+             * de quienes la encabezan y los medios por los que el cliente se puede poner en contacto con la administración de Tamalito
+             */
         }
     }
 }

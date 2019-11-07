@@ -12,8 +12,14 @@ namespace tamalitoWeb
     {
         //ATRIBUTOS O VARIBALES GLOBALES:
         List<ObjSelec> carrito = new List<ObjSelec>();
-        int precioTamal = 15;
-        int precioAtole = 10;
+        int precioVerde;
+        int precioRojo;
+        int precioMole;
+        int precioDulce;
+        int precioArroz;
+        int precioVainilla;
+        int precioFresa;
+        int precioChocolate;
         int subTotal = 0;
         int total = 0;
 
@@ -52,7 +58,7 @@ namespace tamalitoWeb
             try
             {
                 int i = 0;
-                if (!IsPostBack)
+                if (!IsPostBack)//Aquí llenamos los Drop Down List para que el cliente puedar ordenar la cantidad deseada de cada prodcuto, con un máximo de 10 unidades en cada uno
                 {
                     while (i <= 10)
                     {
@@ -68,7 +74,37 @@ namespace tamalitoWeb
                     }
 
                 }
-
+                OdbcConnection con = conectarBD();
+                OdbcCommand cmd = new OdbcCommand("select costo from productos order by idProducto", con);
+                OdbcDataReader rd = cmd.ExecuteReader();
+                rd.Read();
+                if (rd.HasRows){ //Con esto estamos jalando los precios de los productos de la base de datos
+                    precioVerde = rd.GetInt32(0);
+                    lbVerdePrecio.Text = "$" + precioVerde;
+                    rd.Read();
+                    precioRojo = rd.GetInt32(0);
+                    lbRojoPrecio.Text = "$" + precioRojo;
+                    rd.Read();
+                    precioMole = rd.GetInt32(0);
+                    lbMolePrecio.Text = "$" + precioMole;
+                    rd.Read();
+                    precioDulce = rd.GetInt32(0);
+                    lbDulcePrecio.Text = "$" + precioDulce;
+                    rd.Read();
+                    precioArroz = rd.GetInt32(0);
+                    lbAtoleArrozPrecio.Text = "$" + precioArroz;
+                    rd.Read();
+                    precioVainilla = rd.GetInt32(0);
+                    lbAtoleVainillaPrecio.Text = "$" + precioVainilla;
+                    rd.Read();
+                    precioFresa = rd.GetInt32(0);
+                    lbAtoleFresaPrecio.Text = "$" + precioFresa;
+                    rd.Read();
+                    precioChocolate = rd.GetInt32(0);
+                    lbAtoleChocolatePrecio.Text = "$" + precioChocolate;
+                }
+                rd.Close();
+                con.Close();
             }
             catch(Exception ex)
             {
@@ -93,7 +129,7 @@ namespace tamalitoWeb
                     cantSeleccionada["verde"] = int.Parse(ddVerde.SelectedValue.ToString());
                     if (cantSeleccionada["verde"] != 0)
                     {
-                        subTotal = cantSeleccionada["verde"] * precioTamal;
+                        subTotal = cantSeleccionada["verde"] * precioVerde;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "verde";
                         ob.cantidad = cantSeleccionada["verde"];
@@ -105,7 +141,7 @@ namespace tamalitoWeb
                     cantSeleccionada["rojo"] = int.Parse(ddRojo.SelectedValue.ToString());
                     if(cantSeleccionada["rojo"] != 0)
                     {
-                        subTotal = cantSeleccionada["rojo"] * precioTamal;
+                        subTotal = cantSeleccionada["rojo"] * precioRojo;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "rojo";
                         ob.cantidad = cantSeleccionada["rojo"];
@@ -118,7 +154,7 @@ namespace tamalitoWeb
                     cantSeleccionada["mole"] = int.Parse(ddMole.SelectedValue.ToString());
                     if (cantSeleccionada["mole"] != 0)
                     {
-                        subTotal = cantSeleccionada["mole"] * precioTamal;
+                        subTotal = cantSeleccionada["mole"] * precioMole;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "mole";
                         ob.cantidad = cantSeleccionada["mole"];
@@ -131,7 +167,7 @@ namespace tamalitoWeb
                     cantSeleccionada["dulce"] = int.Parse(ddDulce.SelectedValue.ToString());
                     if (cantSeleccionada["dulce"] != 0)
                     {
-                        subTotal = cantSeleccionada["dulce"] * precioTamal;
+                        subTotal = cantSeleccionada["dulce"] * precioDulce;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "dulce";
                         ob.cantidad = cantSeleccionada["dulce"];
@@ -144,7 +180,7 @@ namespace tamalitoWeb
                     cantSeleccionada["arroz"] = int.Parse(ddAtoleArroz.SelectedValue.ToString());
                     if (cantSeleccionada["arroz"] != 0)
                     {
-                        subTotal = cantSeleccionada["arroz"] * precioAtole;
+                        subTotal = cantSeleccionada["arroz"] * precioArroz;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "arroz";
                         ob.cantidad = cantSeleccionada["arroz"];
@@ -157,7 +193,7 @@ namespace tamalitoWeb
                     cantSeleccionada["vainilla"] = int.Parse(ddAtoleVainilla.SelectedValue.ToString());
                     if (cantSeleccionada["vainilla"] != 0)
                     {
-                        subTotal = cantSeleccionada["vainilla"] * precioAtole;
+                        subTotal = cantSeleccionada["vainilla"] * precioVainilla;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "vainilla";
                         ob.cantidad = cantSeleccionada["vainilla"];
@@ -170,7 +206,7 @@ namespace tamalitoWeb
                     cantSeleccionada["fresa"] = int.Parse(ddAtoleFresa.SelectedValue.ToString());
                     if (cantSeleccionada["fresa"] != 0)
                     {
-                        subTotal = cantSeleccionada["fresa"] * precioAtole;
+                        subTotal = cantSeleccionada["fresa"] * precioFresa;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "fresa";
                         ob.cantidad = cantSeleccionada["fresa"];
@@ -183,7 +219,7 @@ namespace tamalitoWeb
                     cantSeleccionada["chocolate"] = int.Parse(ddChocolate.SelectedValue.ToString());
                     if (cantSeleccionada["chocolate"] != 0)
                     {
-                        subTotal = cantSeleccionada["chocolate"] * precioAtole;
+                        subTotal = cantSeleccionada["chocolate"] * precioChocolate;
                         ObjSelec ob = new ObjSelec();
                         ob.producto = "chocolate";
                         ob.cantidad = cantSeleccionada["chocolate"];
@@ -192,7 +228,7 @@ namespace tamalitoWeb
                         total = total + subTotal;
                         subTotal = 0;
                     }
-                gvOrden.DataSource = carrito;
+                gvOrden.DataSource = carrito; //Aquí llenamos el grid view donde se presentará un resumen de la orden del cliente para que este pueda verificarla
                 gvOrden.DataBind();
                 lbTotal.Text = "$ " + total;
                 Session["carrito"] = carrito;
@@ -236,7 +272,7 @@ namespace tamalitoWeb
                         idProd = rd3.GetInt32(0);
                         rd3.Close();
                         cmd4 = new OdbcCommand(String.Format("INSERT INTO pedidosProductos(idPedido, idProducto, cantidad) values({0}, {1}, {2})", idPed, idProd, carritoAUX[i].cantidad), con);
-                        cmd4.ExecuteNonQuery();
+                        cmd4.ExecuteNonQuery(); //Se registra el pedido en la base de datos
                      }
                 }
                 con.Close();

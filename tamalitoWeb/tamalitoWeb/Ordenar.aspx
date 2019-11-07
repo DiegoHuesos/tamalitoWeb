@@ -30,25 +30,25 @@
         <div class="productos">
         <div class="rows">
             <div id="divVerde" class="cards">
-                <asp:Label ID="lbVerdePrecio" class="lb" runat="server" Text="$15"></asp:Label>
+                <asp:Label ID="lbVerdePrecio" class="lb" runat="server" Text="$"></asp:Label>
                 <asp:ImageButton ID="btVerde" runat="server" src="./images/tamales/verde.jpg" class="bt"/>
                 <asp:Label ID="lbVerde" class="lb" runat="server" Text="Tamal Verde"></asp:Label>
                 <asp:DropDownList ID="ddVerde" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards">
-                <asp:Label ID="lbRojoPrecio" class="lb" runat="server" Text="$15"></asp:Label>
+                <asp:Label ID="lbRojoPrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btRojo" runat="server" src="./images/tamales/rojo.jpg" class="bt"/>
                 <asp:Label ID="lbRojo" class="lb" runat="server" Text="Tamal Rojo"></asp:Label>
                 <asp:DropDownList ID="ddRojo" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards">
-                <asp:Label ID="lbMolePrecio" class="lb" runat="server" Text="$15"></asp:Label>
+                <asp:Label ID="lbMolePrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btMole" runat="server" src="./images/tamales/mole.jpg" class="bt"/>
                 <asp:Label ID="lbMole" class="lb" runat="server" Text="Tamal de Mole"></asp:Label>
                 <asp:DropDownList ID="ddMole" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards">
-                <asp:Label ID="lbDulcePrecio" class="lb" runat="server" Text="$15"></asp:Label>
+                <asp:Label ID="lbDulcePrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btDulce" runat="server" src="./images/tamales/dulce.jpg" class="bt"/>
                 <asp:Label ID="lbDulce" class="lb" runat="server" Text="Tamal de Dulce"></asp:Label>
                 <asp:DropDownList ID="ddDulce" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
@@ -56,25 +56,25 @@
         </div>
         <div class="rows">
             <div class="cards">
-                <asp:Label ID="lbAtoleVainillaPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:Label ID="lbAtoleVainillaPrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btAtoleVainilla" runat="server" src="./images/atoles/vainilla.jpg" class="bt"/>
                 <asp:Label ID="lbVainilla" class="lb" runat="server" Text="Atole de Vainilla"></asp:Label>
                 <asp:DropDownList ID="ddAtoleVainilla" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards">
-                <asp:Label ID="lbAtoleChocolatePrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:Label ID="lbAtoleChocolatePrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btAtoleChocolate" runat="server" src="./images/atoles/chocolate.jpg" class="bt"/>
                 <asp:Label ID="lbChocolate" class="lb" runat="server" Text="Atole de Chocolate"></asp:Label>
                 <asp:DropDownList ID="ddChocolate" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards"> 
-                <asp:Label ID="lbAtoleFresaPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:Label ID="lbAtoleFresaPrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btAtoleFresa" runat="server" src="./images/atoles/fresa.jpg" class="bt"/>
                 <asp:Label ID="lbFresa" class="lb" runat="server" Text="Atole de Fresa"></asp:Label>
                 <asp:DropDownList ID="ddAtoleFresa" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>
             </div>
             <div class="cards">
-                <asp:Label ID="lbAtoleArrozPrecio" class="lb" runat="server" Text="$10"></asp:Label>
+                <asp:Label ID="lbAtoleArrozPrecio" class="lb" runat="server" Text=""></asp:Label>
                 <asp:ImageButton ID="btAtoleArroz" runat="server" src="./images/atoles/arroz.jpg" class="bt"/>
                 <asp:Label ID="lbArroz" class="lb" runat="server" Text="Atole de Arroz"></asp:Label>
                 <asp:DropDownList ID="ddAtoleArroz" class="ddl" runat="server" AutoPostBack="True"></asp:DropDownList>

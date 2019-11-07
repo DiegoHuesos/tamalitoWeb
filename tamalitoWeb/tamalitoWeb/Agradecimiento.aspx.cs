@@ -11,7 +11,7 @@ namespace tamalitoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Esta página está destinada a mostrarle un mensaje de agradecimiento al cliente, al igual que darle la opción, en la barra de herramientas de la esquina superior derecha de realizar un nuevo pedido
         }
     }
 }

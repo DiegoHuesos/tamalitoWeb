@@ -11,6 +11,7 @@ namespace tamalitoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Se borran los datos de las sesiones existentes y se regresa al usuario a la página de Inicio
             Session["usuario"] = null;
             Session["carrito"] = null;
             Session["idRegistrado"]=null;
